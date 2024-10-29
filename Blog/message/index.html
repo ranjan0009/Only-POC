@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Message Bus Comparision - Only POC @Digital Manufacturing</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Only POC @Digital Manufacturing</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about.md" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../Cloud.md" class="nav-link">Cloud Solution</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../M&D.md" class="nav-link">Manufacturing & Data</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../case.md" class="nav-link">Case Study</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Message Bus Comparision</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#message-bus-comparison-matrix" class="nav-link">Message Bus Comparison Matrix</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#comparison-matrix" class="nav-link">Comparison Matrix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-notes" class="nav-link">Key Notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="message-bus-comparison-matrix">Message Bus Comparison Matrix</h1>
+<p>This page provides a detailed comparison of popular message bus systems like Kafka, Artemis, MQTT, Red Hat AMQ, HiveMQ, and RabbitMQ. The comparison focuses on criteria relevant to the manufacturing industry, deployment options, open-source status, usage, and support availability.</p>
+<h2 id="comparison-matrix">Comparison Matrix</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Feature/Criteria</strong></th>
+<th><strong>Kafka</strong></th>
+<th><strong>Artemis</strong></th>
+<th><strong>MQTT</strong></th>
+<th><strong>Red Hat AMQ</strong></th>
+<th><strong>HiveMQ</strong></th>
+<th><strong>RabbitMQ</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary Use Case</strong></td>
+<td>Real-time data streams, big data</td>
+<td>High-throughput messaging</td>
+<td>Lightweight messaging for IoT</td>
+<td>Messaging for enterprise solutions</td>
+<td>MQTT-based IoT messaging</td>
+<td>General-purpose messaging</td>
+</tr>
+<tr>
+<td><strong>Manufacturing Suitability</strong></td>
+<td>High, suitable for large-scale data</td>
+<td>Medium to High, adaptable for small to large manufacturing use cases</td>
+<td>High, ideal for IoT and edge device messaging</td>
+<td>High, adaptable for various manufacturing use cases</td>
+<td>High, optimized for IoT in industrial environments</td>
+<td>Medium to High, adaptable for various manufacturing workloads</td>
+</tr>
+<tr>
+<td><strong>Deployment Options</strong></td>
+<td>Cloud, On-premises, Edge</td>
+<td>Cloud, On-premises</td>
+<td>Cloud, Edge, On-premises</td>
+<td>Cloud, On-premises</td>
+<td>Cloud, Edge, On-premises</td>
+<td>Cloud, On-premises</td>
+</tr>
+<tr>
+<td><strong>Edge Device Compatibility</strong></td>
+<td>Moderate, with some connectors available for IoT</td>
+<td>Limited, better suited for on-premises</td>
+<td>High, lightweight for IoT and edge</td>
+<td>Moderate, enterprise focused</td>
+<td>High, designed for IoT and edge</td>
+<td>Moderate, better for on-premises</td>
+</tr>
+<tr>
+<td><strong>Open Source or Paid</strong></td>
+<td>Open Source (Apache License 2.0)</td>
+<td>Open Source (Apache License 2.0)</td>
+<td>Open Source (various implementations)</td>
+<td>Paid (proprietary with open-source options)</td>
+<td>Paid with Community Edition (commercial license for Enterprise)</td>
+<td>Open Source (Mozilla Public License 1.1)</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>High, designed for distributed systems</td>
+<td>High, but with moderate tooling</td>
+<td>Moderate, designed for small, lightweight devices</td>
+<td>High, with clustering support</td>
+<td>High, especially in MQTT deployments</td>
+<td>Moderate, scalable with clustering</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Low latency for large data streams</td>
+<td>Low to moderate, performant</td>
+<td>Low, optimized for lightweight messages</td>
+<td>Low latency with advanced configuration</td>
+<td>Low, designed for high-speed MQTT</td>
+<td>Moderate to low, dependent on setup</td>
+</tr>
+<tr>
+<td><strong>Industry Usage</strong></td>
+<td>Broad, especially in finance, media, and big data</td>
+<td>Broad, used in finance, and smaller-scale industries</td>
+<td>IoT-specific, used in automotive, healthcare</td>
+<td>Enterprise, primarily in finance, healthcare</td>
+<td>Primarily IoT and industrial automation</td>
+<td>Broad, including retail, e-commerce, and logistics</td>
+</tr>
+<tr>
+<td><strong>Protocol Support</strong></td>
+<td>Proprietary, works with Kafka clients</td>
+<td>AMQP, MQTT</td>
+<td>MQTT</td>
+<td>AMQP, MQTT, STOMP, OpenWire</td>
+<td>MQTT</td>
+<td>AMQP, MQTT, STOMP</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>SSL, SASL, ACL</td>
+<td>SSL, SASL</td>
+<td>TLS, basic authentication</td>
+<td>TLS, advanced security settings</td>
+<td>TLS, enterprise-grade security</td>
+<td>SSL, basic authentication</td>
+</tr>
+<tr>
+<td><strong>Community &amp; Support</strong></td>
+<td>Strong community, many online resources</td>
+<td>Medium, Apache community</td>
+<td>Large community with MQTT broker implementations</td>
+<td>Red Hat official support</td>
+<td>Enterprise-grade support, active community for Community Edition</td>
+<td>Strong community and commercial support options</td>
+</tr>
+<tr>
+<td><strong>Suitable for Cloud</strong></td>
+<td>Yes, highly suitable for cloud deployments</td>
+<td>Yes, deployable on various cloud services</td>
+<td>Yes, highly compatible with cloud and edge</td>
+<td>Yes, with OpenShift compatibility</td>
+<td>Yes, optimized for cloud and hybrid</td>
+<td>Yes, widely used in cloud</td>
+</tr>
+<tr>
+<td><strong>Management Tools</strong></td>
+<td>Kafka Connect, KSQL, Kafka Streams</td>
+<td>Web Console, JMX</td>
+<td>Simple, often depends on broker used</td>
+<td>Red Hat AMQ Console, OpenShift integration</td>
+<td>Control Center, Admin UI for Enterprise</td>
+<td>Management plugins available</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-notes">Key Notes</h2>
+<ul>
+<li><strong>Kafka</strong>: Excellent for real-time analytics, distributed environments, and large-scale data pipelines, though it can be resource-intensive.</li>
+<li><strong>Artemis</strong>: A solid choice for high-throughput messaging, with better scalability than most but limited edge compatibility.</li>
+<li><strong>MQTT</strong>: Great for IoT and edge computing; MQTT protocol is lightweight and ideal for constrained devices.</li>
+<li><strong>Red Hat AMQ</strong>: Suited for enterprise environments with robust support and management tools, but generally a paid solution.</li>
+<li><strong>HiveMQ</strong>: MQTT broker optimized for IoT and industrial edge deployments, available in both community and enterprise versions.</li>
+<li><strong>RabbitMQ</strong>: Versatile for general-purpose messaging; popular for retail, logistics, and e-commerce.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
